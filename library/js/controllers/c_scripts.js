@@ -9,12 +9,12 @@ switch ( uriSplit ) {
     var configure = require('../library/js/models/m_configure.js');
     var ready = require('../library/js/views/v_ready');
     var volumeControl = require('../library/js/models/m_volumeControl');
+    var controlsChat = require('../library/js/models/m_controlsChat');
     break;
   case 'chat.html':
     var pileModel = require('../library/js/models/m_pile');
     var loopMessage = require('../library/js/models/m_loopMessage');
     var chatChangeChroma = require('../library/js/models/m_chatChangeChroma');
-    var controlsChat = require('../library/js/models/m_controlsChat');
     break;
   default:
 }
@@ -34,12 +34,12 @@ $(document).ready(function(){
       configure.m_configure(socket);
       configure.twitchChannelSetup();
       volumeControl.m_volumeControl(setup, file, fs);
-      break;
-    case 'chat.html':
-      chatChangeChroma.m_chatChangeChroma();
       controlsChat.m_controlsChat(fs);
       controlsChat.keyPausePlay();
       controlsChat.searchId();
+      break;
+    case 'chat.html':
+      chatChangeChroma.m_chatChangeChroma();
       pileModel.m_pile(socket);
       loopMessage.m_loopMessage(setup, file, fs);
       loopMessage.loopInit(pileModel);

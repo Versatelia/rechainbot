@@ -174,38 +174,3 @@ message-id {
     font-family: 'SourceSansPro-SemiBold';
     justify-content: center;
 }
-search-id {
-    display: flex;
-    position: fixed;
-    left: 3.5em;
-    bottom: 0;
-}
-search-id > input {
-    height: 2em;
-    width: 2em;
-    opacity: 0.5;
-    font-family: 'SourceSansPro-SemiBold';
-    font-size: 16pt;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-bar-nav {
-    width: 32px;
-    display: flex;
-    flex-flow: column;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-option-control,
-option-control img {
-    height: 32px;
-    width: 32px;
-    display: flex;
-    opacity: 0.8;
-    cursor: pointer;
-}
-option-control:hover {
-    background: rgba(0,0,0,0.5);
-}

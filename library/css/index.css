@@ -302,3 +302,32 @@ read-last-message-stated {
     background: #721920; /*#089040*/
     margin-left: 1.5em;
 }
+search-id {
+    display: flex;
+}
+search-id > input {
+    height: 2em;
+    width: 2em;
+    opacity: 0.5;
+    font-family: 'SourceSansPro-SemiBold';
+    font-size: 16pt;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+bar-options {
+    width: 32px;
+    display: flex;
+    flex-flow: row;
+}
+bar-options > option-control,
+bar-options > option-control img {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    opacity: 0.8;
+    cursor: pointer;
+}
+bar-options > option-control:hover {
+    background: rgba(0,0,0,0.5);
+}

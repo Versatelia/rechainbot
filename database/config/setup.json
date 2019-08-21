@@ -1,1 +1,1 @@
-{"options":{"debug":false},"conection":{"cluster":"aws","reconnect":true},"channels":["alexelcapo"],"changeChannel":false,"date":"-DMZ-3-7-2019-H-19-36","volume":0.3,"percent":3,"lastMessage":true,"delayReading":3000}
+{"options":{"debug":false},"conection":{"cluster":"aws","reconnect":true},"channels":["xisma"],"changeChannel":false,"date":"-DMZ-3-7-2019-H-20-51","volume":1,"percent":100,"lastMessage":true,"delayReading":3000}
