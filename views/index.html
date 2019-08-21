@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ReChainBot</title>
+    <link rel="stylesheet" href="../library/css/index.css">
+    <script src="./../library/js/resources/sprint.js"></script>
+    <script src="./../node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="text/javascript" src="../library/js/controllers/c_scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <logo><img src="../library/image/logo.png" alt="Logo"></logo>
+      <title-app>ReChainBot</title-app>
+      <version-app>Alpha v0.0.9</version-app>
+    </header>
+    <options-menu>
+      <email>📧</email>
+      <minimize-app>─</minimize-app>
+      <close-app>X</close-app>
+    </options-menu>
+    <app>
+      <bar-nav>
+        <option-control><img src="../library/image/control-chat.svg" alt=""></option-control>
+        <option-control><img src="../library/image/networks.svg" alt=""></option-control>
+      </bar-nav>
+      <main>
+        <control-volume>
+          <control-text>Volumen de voz</control-text>
+          <control-volume-panel>
+            <form class="control-volume-panel">
+              <input type="range" id="volume-bar" min="0" max="100" value="">
+            </form>
+            <volume-view>0%</volume-view>
+          </control-volume-panel>
+        </control-volume>
+        <!-- Se va a mover aqui todo lo relacionado con los controles del chat para
+            dejar limpio el historial. -->
+      </main>
+      <!-- Esta parte pertenece a la configuración de la cuenta de twitch a la que está leyendo -->
+      <configure>
+        <form action="" method="post">
+          <input id="twitchConfigInput"  type="text" name="" value="">
+          <button id="twitchConfigButton"  type="button" name="Lock">Lock</button>
+        </form>
+      </configure>
+    </app>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background: #e4e4e4;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, div, section, p, ul, li, a, article {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: calibri;
+    color: #151515;
+    text-decoration: none;
+}

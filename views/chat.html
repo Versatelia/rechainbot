@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../library/css/chat.css">
+    <script src="./../library/js/resources/sprint.js"></script>
+    <script src="./../node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script type="text/javascript" src="../library/js/controllers/c_scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <logo><img src="../library/image/logo.png" alt="Logo"></logo>
+      <title-app>Chat</title-app>
+    </header>
+    <options-menu>
+      <minimize-app>─</minimize-app>
+      <close-app>X</close-app>
+    </options-menu>
+    <app>
+      <messages>
+        <topped></topped>
+      </messages>
+      <search-id>
+        <input type="text" id="search-id" name="" value="">
+      </search-id>
+      <bar-nav>
+        <option-control id="play"><img src="../library/image/play.svg" alt=""></option-control>
+        <option-control id="pause"><img src="../library/image/pause.svg" alt=""></option-control>
+        <option-control id="cleanAll"><img src="../library/image/readall.svg" alt=""></option-control>
+        <option-control id="changeChroma"><img src="../library/image/switch.svg" alt=""></option-control>
+      </bar-nav>
+    </app>
+  </body>
+</html>

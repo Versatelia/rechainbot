@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'SourceSansPro-Black';
+    src: url('../fonts/SourceSansPro-Black.ttf');
+}
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('../fonts/SourceSansPro-Bold.ttf');
+}
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: url('../fonts/SourceSansPro-SemiBold.ttf');
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background: #e4e4e4;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, div, section, p, ul, li, a, article {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: calibri;
+    color: #151515;
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    height: 50px;
+    width: 550px;
+    background: #b2b2b2;
+    display: flex;
+    flex-flow: row;
+    color: #696969;
+    -webkit-app-region: drag;
+}
+logo {
+    margin-right: 1em;
+}
+title-app {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-family: 'SourceSansPro-Black';
+}
+version-app {
+    height: 100%;
+    width: 100%;
+    padding-left: 0.5em;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    bottom: 10px;
+    font-family: 'SourceSansPro-Regular';
+}
+app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+bar-nav {
+    min-height: 550px;
+    width: 112px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #cbcbcb;
+}
+option-control {
+    margin-top: 32px;
+}
+option-control img {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    opacity: 0.4;
+    cursor: pointer;
+}
+main {
+    min-height: 550px;
+    min-width: 688px;
+    display: flex;
+    flex-flow: column;
+    background: #cbcbcb;
+}
+configure {
+    min-height: 550px;
+    min-width: 100%;
+    display: none;
+    background: #cbcbcb;
+}
+options-menu {
+    height: 50px;
+    background: #b2b2b2;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'SourceSansPro-Black';
+    font-size: 2em;
+    color: #696969;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+email {
+    margin-right: 100px;
+}
+
+email,
+minimize-app,
+close-app {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+}
+
+/* MESSAGES */
+
+messages {
+    height: 550px;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+topped {
+    content: '';
+    height: 245px;
+    width: 100%;
+    display: flex;
+}
+messages::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+messages::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+messages::-webkit-scrollbar-thumb
+{
+	background-color: #F90;
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+message-content {
+    min-height: 2em;
+    width: 395px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    position: static;
+    z-index: 2;
+}
+message-time {
+    margin-left: 0.5em;
+    display: flex;
+    float: left;
+    margin-right: 1em;
+    font-family: 'SourceSansPro-SemiBold';
+}
+message-user {
+    width: 75%;
+    border-left: 3px solid #000000;
+    padding-left: 1em;
+    font-family: 'SourceSansPro-SemiBold';
+}
+message-user > b {
+    display: flex;
+    float: flex;
+    font-family: 'SourceSansPro-Black';
+}
+message-user > span {
+    display: flex;
+}
+
+/* VOLUME */
+/*control-volume {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    font-family: 'SourceSansPro-Regular';
+    font-size: 1.5rem;
+}
+control-volume-panel {
+    height: 40px;
+    width: 300px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    position: relative;
+    top: 1em;
+    cursor: -webkit-grab;
+}
+control-volume-panel::before {
+    content: '';
+    width: 300px;
+    display: flex;
+    border-bottom: 1px solid #4a4a4a;
+    position: absolute;
+}
+control-volume-bar {
+    height: 40px;
+    width: 20px;
+    display: flex;
+    background: #4a4a4a;
+    position: relative;
+}
+control-text {
+    color: #4a4a4a;
+}
+volume-view {
+    color: #4a4a4a;
+    position: absolute;
+    left: 350px;
+}*/
+control-volume-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.control-volume-panel {
+    width: 60%;
+}
+control-volume {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    font-family: 'SourceSansPro-Regular';
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+control-text {
+    color: #4a4a4a;
+}
+volume-view {
+    color: #4a4a4a;
+    font-size: 30pt;
+    margin-left: 1em;
+}
+#volume-bar { margin: 0; display: flex; width: 100%;height:2em;}
+#volume-bar[type=range]::-webkit-slider-thumb  {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  padding: 1em;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+#volume-bar[type=range]::-webkit-slider-runnable-track {
+  height: 1em;
+  cursor: pointer;
+  border-radius: 1.3px;
+  background: #3c3c3c;
+}
+
+/* READ LAST MESSAGE */
+read-last-message {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: 'SourceSansPro-Regular';
+    margin-top: 6em;
+}
+read-last-message-text {
+    color: #4a4a4a;
+    font-size: 1.5rem;
+}
+read-last-message-stated {
+    width: 10em;
+    text-align: center;
+    border-radius: 1em;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #e4e4e4;
+    background: #721920; /*#089040*/
+    margin-left: 1.5em;
+}

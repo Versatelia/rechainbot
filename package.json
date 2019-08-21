@@ -1,0 +1,23 @@
+{
+  "name": "ReChainBot",
+  "version": "1.0.0",
+  "description": "None",
+  "main": "main.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "electron": "^1.8.8",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.1.9",
+    "jquery": "^3.4.1",
+    "npm": "^5.10.0",
+    "phantom": "^4.0.12",
+    "say": "^0.14.0",
+    "socketio": "^1.0.0",
+    "speak-tts": "^1.1.0",
+    "tmi.js": "^1.4.2",
+    "webpage": "^0.3.0"
+  },
+  "scripts": {},
+  "author": "Daniel Hernández Felipe",
+  "license": "ISC"
+}
