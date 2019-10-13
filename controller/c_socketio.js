@@ -48,7 +48,7 @@ exports.controllerSocketIO = function(app, fs, win, winTwo) {
       switch (uri.view) {
         case 'index.html':
           socket.on('tc', function (data) {
-            callSetupChannel.chargeChannel(data, fs);
+            callSetupChannel.chargeChannel(app, data, fs);
           });
           break;
         case 'chat.html':
