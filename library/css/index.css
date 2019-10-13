@@ -76,9 +76,11 @@ bar-nav {
     align-items: center;
     background: #cbcbcb;
 }
-option-control {
-    margin-top: 32px;
+
+legend {
+    text-align: center;
 }
+
 option-control img {
     height: 64px;
     width: 64px;
@@ -94,9 +96,8 @@ main {
     background: #cbcbcb;
 }
 configure {
-    min-height: 550px;
     min-width: 100%;
-    display: none;
+    display: flex;
     background: #cbcbcb;
 }
 options-menu {
@@ -251,7 +252,6 @@ control-volume {
     flex-flow: column;
     font-family: 'SourceSansPro-Regular';
     font-size: 1.5rem;
-    margin-top: 1em;
 }
 control-text {
     color: #4a4a4a;

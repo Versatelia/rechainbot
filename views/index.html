@@ -25,33 +25,48 @@
         <option-control><img src="../library/image/networks.svg" alt=""></option-control>
       </bar-nav>
       <main>
-        <control-volume>
-          <control-text>Volumen de voz</control-text>
-          <control-volume-panel>
-            <form class="control-volume-panel">
-              <input type="range" id="volume-bar" min="0" max="100" value="">
-            </form>
-            <volume-view>0%</volume-view>
-          </control-volume-panel>
-        </control-volume>
+        <!-- Barra de control de volumen -->
+        <fieldset>
+          <legend>Control de volumen</legend>
+          <control-volume>
+            <control-text>Volumen de voz</control-text>
+            <control-volume-panel>
+              <form class="control-volume-panel">
+                <input type="range" id="volume-bar" min="0" max="100" value="">
+              </form>
+              <volume-view>0%</volume-view>
+            </control-volume-panel>
+          </control-volume>
+        </fieldset>
+        <!-- Salto por ID a comentario del chat -->
+        <fieldset>
+          <legend>Salto a comentario del chat</legend>
         <search-id>
           <input type="text" id="search-id" name="" value="">
         </search-id>
-        <bar-options>
-          <option-control id="play"><img src="../library/image/play.svg" alt=""></option-control>
-          <option-control id="pause"><img src="../library/image/pause.svg" alt=""></option-control>
-          <option-control id="cleanAll"><img src="../library/image/readall.svg" alt=""></option-control>
-        </bar-options>
+        </fieldset>
+        <!-- Control sobre la continuidad de la lectura del chat -->
+        <fieldset>
+          <legend>Opciones de control</legend>
+          <bar-options>
+            <option-control id="play"><img src="../library/image/play.svg" alt=""></option-control>
+            <option-control id="pause"><img src="../library/image/pause.svg" alt=""></option-control>
+            <option-control id="cleanAll"><img src="../library/image/readall.svg" alt=""></option-control>
+          </bar-options>
+        </fieldset>
         <!-- Se va a mover aqui todo lo relacionado con los controles del chat para
             dejar limpio el historial. -->
+        <!-- Esta parte pertenece a la configuración de la cuenta de twitch a la que está leyendo -->
+        <fieldset>
+          <legend>Cuenta de Twitch</legend>
+          <configure>
+            <form action="" method="post">
+              <input id="twitchConfigInput"  type="text" name="" value="">
+              <button id="twitchConfigButton"  type="button" name="Lock">Lock</button>
+            </form>
+          </configure>
+        </fieldset>
       </main>
-      <!-- Esta parte pertenece a la configuración de la cuenta de twitch a la que está leyendo -->
-      <configure>
-        <form action="" method="post">
-          <input id="twitchConfigInput"  type="text" name="" value="">
-          <button id="twitchConfigButton"  type="button" name="Lock">Lock</button>
-        </form>
-      </configure>
     </app>
   </body>
 </html>
