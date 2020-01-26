@@ -1,0 +1,17 @@
+/* Left Bar */
+bar-options {
+    width: 32px;
+    display: flex;
+    flex-flow: row;
+}
+bar-options > option-control,
+bar-options > option-control img {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    opacity: 0.8;
+    cursor: pointer;
+}
+bar-options > option-control:hover {
+    background: rgba(0,0,0,0.5);
+}

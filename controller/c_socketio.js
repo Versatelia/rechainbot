@@ -50,6 +50,9 @@ exports.controllerSocketIO = function(app, fs, win, winTwo) {
           socket.on('tc', function (data) {
             callSetupChannel.chargeChannel(app, data, fs);
           });
+          socket.on('kw', function (data) {
+            callSetupChannel.chargeKeyWord(app, data, fs);
+          });
           break;
         case 'chat.html':
         // Ahora mismo lee todo el archivo de la base de datos.

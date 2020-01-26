@@ -1,4 +1,5 @@
 var uriSplit = window.location.pathname.split("/")[5];
+console.log('carga');
 var file = "./database/config/setup.json";
 const fs = require('fs');
 const debug = require('../library/js/models/m_debug');
@@ -14,7 +15,6 @@ switch ( uriSplit ) {
   case 'chat.html':
     var pileModel = require('../library/js/models/m_pile');
     var loopMessage = require('../library/js/models/m_loopMessage');
-    var chatChangeChroma = require('../library/js/models/m_chatChangeChroma');
     break;
   default:
 }
@@ -33,13 +33,13 @@ $(document).ready(function(){
       ready.v_twitchChannelSetup();
       configure.m_configure(socket);
       configure.twitchChannelSetup();
+      configure.keyWord();
       volumeControl.m_volumeControl(setup, file, fs);
       controlsChat.m_controlsChat(fs);
       controlsChat.keyPausePlay();
       controlsChat.searchId();
       break;
     case 'chat.html':
-      chatChangeChroma.m_chatChangeChroma();
       pileModel.m_pile(socket);
       loopMessage.m_loopMessage(setup, file, fs);
       loopMessage.loopInit(pileModel);

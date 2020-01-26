@@ -101,7 +101,7 @@ app.on('activate', () => {
 appweb.get('/', function( req, res) {
   res.render('mobile');
 });
-appweb.listen('8080', '192.168.1.82', () => {
+appweb.listen('7000', '192.168.1.93', () => {
   console.log('Servidor en linea.');
 });
 // En este archivo tu puedes incluir el resto del código del proceso principal de

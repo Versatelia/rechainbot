@@ -1,6 +1,7 @@
 // Here is controls the Chat, are here the models of the functions of control.
 exports.m_controlsChat = function(fs){
 /*
+# Antiguo script que situaba mediante un click y leía el mensaje picado
 $('messages').on('click', (event) => {
   var messageCount = $('messages > message-content').length;
   var obj;
@@ -55,7 +56,6 @@ $('messages').on('click', (event) => {
     // ENTER
     $('#search-id').on('keypress', function( event ){
       if(event.keyCode == 13){
-          console.log($('#search-id').val());
           var contents = fs.readFileSync( './database/tables/pileFocus.json' );
           obj = JSON.parse( contents );
           obj.push( $('#search-id').val() );

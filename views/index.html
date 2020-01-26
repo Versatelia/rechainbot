@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>ReChainBot</title>
+    <link rel="stylesheet" href="../library/css/header.css">
+    <link rel="stylesheet" href="../library/css/barOptions.css">
     <link rel="stylesheet" href="../library/css/index.css">
     <script src="./../library/js/resources/sprint.js"></script>
     <script src="./../node_modules/socket.io-client/dist/socket.io.js"></script>
@@ -21,8 +23,9 @@
     </options-menu>
     <app>
       <bar-nav>
-        <option-control><img src="../library/image/control-chat.svg" alt=""></option-control>
-        <option-control><img src="../library/image/networks.svg" alt=""></option-control>
+        <option-control><a href="./index.html"><img src="../library/image/control-chat.svg" alt=""></a></option-control>
+        <option-control><a href="./quiet.html"><img src="../library/image/quiet.svg" alt=""></a></option-control>
+        <option-control><a href="./networks.html"><img src="../library/image/networks.svg" alt=""></a></option-control>
       </bar-nav>
       <main>
         <!-- Barra de control de volumen -->
@@ -65,6 +68,15 @@
               <button id="twitchConfigButton"  type="button" name="Lock">Lock</button>
             </form>
           </configure>
+        </fieldset>
+        <!-- Palabra clave para ser leido solo a traves de ella  -->
+        <fieldset>
+          <legend>Palabra clave</legend>
+          <form action="" method="post">
+            Leer solo palabra clave <input id="twitchKeyCheckbox" type="checkbox" name="" value="1"/>
+            <input id="twitchKeyInput"  type="text" name="" value="" placeholder="Palabra clave"/>
+            <button id="twitchKeyConfirm"  type="button" name="Confirmar">Confirmar</button>
+          </form>
         </fieldset>
       </main>
     </app>
